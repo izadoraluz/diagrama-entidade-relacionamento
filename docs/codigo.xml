@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: https://sql.toad.cz/ -->
+<sql>
+<datatypes db="mysql">
+    <group label="Numeric" color="rgb(238,238,170)">
+      <type label="Integer" length="0" sql="INTEGER"/>
+      <type label="INT" length="0" sql="INT"/>
+    </group>
+    <group label="Character" color="rgb(255,200,200)">
+      <type label="Varchar" length="1" sql="VARCHAR"/>
+    </group>
+  </datatypes><table x="506" y="58" name="OCRD">
+<row name="CardCode" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+</row>
+<row name="CardName" null="0" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+</row>
+<row name="CardType" null="0" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+</row>
+<row name="GroupCode" null="1" autoincrement="0">
+<datatype>INT</datatype>
+<default>NULL</default></row>
+<row name="Phone1" null="1" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+<default>NULL</default></row>
+<row name="EmailAddress" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="null">
+<part>CardCode</part>
+</key>
+</table>
+<table x="672" y="197" name="CRD1">
+<row name="AddressID" null="0" autoincrement="1">
+<datatype>INT</datatype>
+</row>
+<row name="CardCode_OCRD" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+<relation table="OCRD" row="CardCode" />
+</row>
+<row name="CardCode" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+</row>
+<row name="Address" null="0" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+</row>
+<row name="City" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="State" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="ZipCode" null="1" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="null">
+<part>AddressID</part>
+</key>
+<key type="FOREIGN" name="fk_CardCode_CRD1">
+<part>CardCode</part>
+</key>
+</table>
+<table x="825" y="59" name="CRD7">
+<row name="SegmentID" null="0" autoincrement="1">
+<datatype>INT</datatype>
+</row>
+<row name="CardCode_OCRD" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+<relation table="OCRD" row="CardCode" />
+</row>
+<row name="CardCode" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+</row>
+<row name="SegmentName" null="0" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+</row>
+<row name="TaxId1" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="TaxId2" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="TaxId3" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="TaxId4" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="TaxId5" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="TaxId6" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="TaxId7" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="TaxId8" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="TaxId9" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="null">
+<part>SegmentID</part>
+</key>
+<key type="FOREIGN" name="fk_CardCode_CRD7">
+<part>CardCode</part>
+</key>
+</table>
+<table x="254" y="220" name="OCRB">
+<row name="BankID" null="0" autoincrement="1">
+<datatype>INT</datatype>
+</row>
+<row name="CardCode" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+</row>
+<row name="BankName" null="0" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+</row>
+<row name="AccountNumber" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+</row>
+<row name="Branch" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="CardCode_OCRD" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+<relation table="OCRD" row="CardCode" />
+</row>
+<key type="PRIMARY" name="null">
+<part>BankID</part>
+</key>
+<key type="FOREIGN" name="fk_CardCode_OCRB">
+<part>CardCode</part>
+</key>
+</table>
+</sql>
