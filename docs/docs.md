@@ -26,5 +26,5 @@ O **Modelo Lógico** é a etapa subsequente do modelo conceitual. Ele detalha co
 
 Neste modelo, vemos a mesma estrutura de entidades do modelo conceitual, porém com uma descrição detalhada dos atributos de cada uma. Por exemplo, a entidade **OCRD** contém atributos como **CardName**, **CardType**, **Phone1**, e **EmailAddress**. A entidade **OCRB** inclui campos específicos de banco, como **BankName** e **AccountNumber**, enquanto **CRD1** detalha endereços, e **CRD7** guarda informações fiscais.
 
-Para acessar a versão `SQL` do modelo lógico criado, acessar [esse link](./codigo.sql).
-Para acessar a versão `XML` do modelo lógico criado, acessar [esse link](./codigo.xml).
+Para acessar a versão `SQL` do modelo lógico criado, acessar [esse link](../src/codigo.sql).
+Para acessar a versão `XML` do modelo lógico criado, acessar [esse link](../src/codigo.xml).
